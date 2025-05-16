@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional home appliance repair services - Fast, reliable, and affordable repairs for refrigerators, washing machines, ACs, and all major appliances. Available 24/7.">
+    <meta name="keywords" content="appliance repair, home appliance service, refrigerator repair, washing machine repair, AC repair, dishwasher repair, professional repair service">
+    <meta name="author" content="AppliancePro">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AppliancePro - Expert Home Appliance Repair Services">
+    <meta property="og:description" content="Professional home appliance repair services - Fast, reliable, and affordable repairs for all major brands">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://yourdomain.com">
+    <title>AppliancePro - Expert Home Appliance Repair Services</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">
+                <i class="fas fa-tools" aria-hidden="true"></i>
+                <span>AppliancePro</span>
+            </div>
+            <div class="nav-links" role="navigation">
+                <a href="#home" aria-current="page">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#process">Process</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#booking" class="nav-cta" aria-label="Book a repair service">Book Now</a>
+            </div>
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="home" class="banner">
+        <div class="banner-container">
+            <div class="banner-content" data-aos="fade-right">
+                <h1>Expert Appliance Repair Services</h1>
+                <p>Professional repairs for all your home appliances. Fast, reliable, and affordable service.</p>
+                <div class="banner-buttons">
+                    <a href="#booking" class="cta-button">Book Now</a>
+                    <a href="#services" class="secondary-button">Learn More</a>
+                </div>
+                <div class="banner-stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-text">Years Experience</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-text">Repairs Done</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-text">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-image" data-aos="fade-left">
+                <img src="https://placehold.co/600x600" alt="Professional appliance repair technician at work">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="booking-form">
+        <div class="form-container" data-aos="fade-up">
+            <div class="form-header">
+                <h2>Schedule Your Repair</h2>
+                <p>Get your appliance fixed by our experts</p>
+            </div>
+            <form id="repair-form" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required 
+                                   placeholder="Your Name" aria-label="Your name">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="tel" id="phone" name="phone" required 
+                                   placeholder="Phone Number" aria-label="Phone number"
+                                   pattern="[0-9]{10}">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" id="address" name="address" required 
+                                   placeholder="Service Address" aria-label="Service address">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <select id="brand" name="brand" required aria-label="Appliance brand">
+                                <option value="">Select Brand</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="lg">LG</option>
+                                <option value="whirlpool">Whirlpool</option>
+                                <option value="bosch">Bosch</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <i class="fas fa-building" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <select id="appliance" name="appliance" required aria-label="Appliance type">
+                                <option value="">Select Appliance</option>
+                                <option value="refrigerator">Refrigerator</option>
+                                <option value="washing-machine">Washing Machine</option>
+                                <option value="dishwasher">Dishwasher</option>
+                                <option value="oven">Oven</option>
+                                <option value="microwave">Microwave</option>
+                                <option value="ac">Air Conditioner</option>
+                                <option value="tv">TV</option>
+                                <option value="water-purifier">Water Purifier</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <textarea id="problem" name="problem" rows="3" 
+                                    placeholder="Describe your problem..." 
+                                    aria-label="Problem description"></textarea>
+                            <i class="fas fa-comment-alt" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="submit" class="submit-btn">
+                        <span>Submit Request</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <h3>Expert repair solutions for all your home appliances</h3>
+        </div>
+        <div class="services-grid">
+            <!-- 1. Refrigerator -->
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <h4 class="card-title">Refrigerator Repair</h4>
+                <p>Expert repairs for all refrigerator brands and models.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Cooling System Repair</li>
+                    <li><i class="fas fa-check"></i> Ice Maker Service</li>
+                    <li><i class="fas fa-check"></i> Temperature Control</li>
+                </ul>
+            </div>
+
+            <!-- 2. Washing Machine -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h4 class="card-title">Washing Machine</h4>
+                <p>Professional washing machine repair and maintenance.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Drum & Motor Repair</li>
+                    <li><i class="fas fa-check"></i> Water System Fix</li>
+                    <li><i class="fas fa-check"></i> Control Board Service</li>
+                </ul>
+            </div>
+
+            <!-- 3. AC Repair -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h4 class="card-title">AC Repair</h4>
+                <p>Complete air conditioning service and maintenance.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Cooling Efficiency</li>
+                    <li><i class="fas fa-check"></i> Gas Refill Service</li>
+                    <li><i class="fas fa-check"></i> Filter Maintenance</li>
+                </ul>
+            </div>
+
+            <!-- 4. TV Repair -->
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <h4 class="card-title">TV Repair</h4>
+                <p>Expert solutions for all TV-related problems.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Display Repair</li>
+                    <li><i class="fas fa-check"></i> Smart TV Service</li>
+                    <li><i class="fas fa-check"></i> Audio System Fix</li>
+                </ul>
+            </div>
+
+            <!-- 5. Dishwasher -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h4 class="card-title">Dishwasher Repair</h4>
+                <p>Complete dishwasher repair and maintenance.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Cleaning System</li>
+                    <li><i class="fas fa-check"></i> Water Flow Fix</li>
+                    <li><i class="fas fa-check"></i> Pump Repair</li>
+                </ul>
+            </div>
+
+            <!-- 6. Oven & Stove -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h4 class="card-title">Oven & Stove</h4>
+                <p>Professional oven and stove repair services.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Heating Elements</li>
+                    <li><i class="fas fa-check"></i> Temperature Control</li>
+                    <li><i class="fas fa-check"></i> Gas Line Service</li>
+                </ul>
+            </div>
+
+            <!-- 7. Microwave -->
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h4 class="card-title">Microwave Repair</h4>
+                <p>Fast and reliable microwave repair service.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Heating System</li>
+                    <li><i class="fas fa-check"></i> Door Mechanism</li>
+                    <li><i class="fas fa-check"></i> Control Panel Fix</li>
+                </ul>
+            </div>
+
+            <!-- 8. Water Purifier -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h4 class="card-title">Water Purifier</h4>
+                <p>Expert water purifier maintenance and repair.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Filter Replacement</li>
+                    <li><i class="fas fa-check"></i> UV System Service</li>
+                    <li><i class="fas fa-check"></i> Water Flow Fix</li>
+                </ul>
+            </div>
+
+            <!-- 9. Emergency Service -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h4 class="card-title">Emergency Service</h4>
+                <p>24/7 emergency appliance repair service.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Quick Response</li>
+                    <li><i class="fas fa-check"></i> All Appliances</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="why-choose-us">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <h3>Experience excellence in appliance repair services</h3>
+        </div>
+        <div class="features-grid">
+            <div class="feature" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-content">
+                    <h4 class="card-title">24/7 Service</h4>
+                    <p>Round the clock emergency repair service with quick response time</p>
+                </div>
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="150">
+                <div class="feature-content">
+                    <h4 class="card-title">Certified Experts</h4>
+                    <p>Experienced and certified professional technicians</p>
+                </div>
+                <div class="feature-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-content">
+                    <h4 class="card-title">90-Day Warranty</h4>
+                    <p>Comprehensive service warranty on all repairs</p>
+                </div>
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="250">
+                <div class="feature-content">
+                    <h4 class="card-title">Best Pricing</h4>
+                    <p>Competitive rates with no hidden charges</p>
+                </div>
+                <div class="feature-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-content">
+                    <h4 class="card-title">Modern Tools</h4>
+                    <p>Latest diagnostic and repair equipment</p>
+                </div>
+                <div class="feature-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="350">
+                <div class="feature-content">
+                    <h4 class="card-title">5-Star Service</h4>
+                    <p>Consistently rated 5 stars by our customers</p>
+                </div>
+                <div class="feature-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section id="process" class="our-process">
+        <div class="section-header">
+            <h2>Our Process</h2>
+            <h3>Simple and efficient repair process</h3>
+        </div>
+        <div class="process-timeline">
+            <div class="step" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-connector"></div>
+                <div class="step-number">01</div>
+                <div class="step-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="step-content">
+                    <h4 class="card-title">Contact Us</h4>
+                    <p>Reach out to us through phone, email, or our online booking form.</p>
+                </div>
+            </div>
+
+            <div class="step" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-connector"></div>
+                <div class="step-number">02</div>
+                <div class="step-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="step-content">
+                    <h4 class="card-title">Home Visit</h4>
+                    <p>Our technician arrives at your location at the scheduled time.</p>
+                </div>
+            </div>
+
+            <div class="step" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-connector"></div>
+                <div class="step-number">03</div>
+                <div class="step-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="step-content">
+                    <h4 class="card-title">Diagnosis</h4>
+                    <p>We thoroughly inspect your appliance to identify the issue.</p>
+                </div>
+            </div>
+
+            <div class="step" data-aos="fade-up" data-aos-delay="400">
+                <div class="step-connector"></div>
+                <div class="step-number">04</div>
+                <div class="step-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="step-content">
+                    <h4 class="card-title">Repair & Check</h4>
+                    <p>Complete the repairs and ensure everything works perfectly.</p>
+                </div>
+            </div>
+
+            <div class="step" data-aos="fade-up" data-aos-delay="500">
+                <div class="step-connector"></div>
+                <div class="step-number">05</div>
+                <div class="step-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="step-content">
+                    <h4 class="card-title">Payment</h4>
+                    <p>Convenient payment options after service completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial" data-aos="fade-up">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>"Excellent service! Fixed my washing machine in no time. Very professional and knowledgeable."</p>
+                <div class="client">- Sarah Johnson</div>
+            </div>
+            <div class="testimonial" data-aos="fade-up">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>"Reliable and efficient service. The technician was punctual and solved the AC issue quickly."</p>
+                <div class="client">- Michael Brown</div>
+            </div>
+            <div class="testimonial" data-aos="fade-up">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>"Great experience with the refrigerator repair. Fair pricing and excellent work!"</p>
+                <div class="client">- Emily Davis</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-content">
+                <div class="footer-section company-info">
+                    <div class="footer-logo">
+                        <i class="fas fa-tools"></i>
+                        <span>AppliancePro</span>
+                    </div>
+                    <p class="company-description">Professional appliance repair services you can trust. Available 24/7 for all your repair needs.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>1-800-REPAIR</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@appliancepro.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span>123 Service Street, City</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section services-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services">Refrigerator Repair</a></li>
+                        <li><a href="#services">Washing Machine Repair</a></li>
+                        <li><a href="#services">AC Repair</a></li>
+                        <li><a href="#services">Dishwasher Repair</a></li>
+                        <li><a href="#services">Microwave Repair</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section connect">
+                    <h3>Connect With Us</h3>
+                    <p>Follow us on social media for tips, offers, and updates.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                            <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 AppliancePro. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "AppliancePro",
+        "image": "https://yourdomain.com/images/logo.jpg",
+        "description": "Professional home appliance repair services - Fast, reliable, and affordable repairs for all major brands",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Service Street",
+            "addressLocality": "City",
+            "addressRegion": "State",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.7128,
+            "longitude": -74.0060
+        },
+        "url": "https://yourdomain.com",
+        "telephone": "1-800-REPAIR",
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "sameAs": [
+            "https://www.facebook.com/appliancepro",
+            "https://twitter.com/appliancepro",
+            "https://www.instagram.com/appliancepro",
+            "https://www.linkedin.com/company/appliancepro"
+        ]
+    }
+    </script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html> 
