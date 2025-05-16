@@ -1639,23 +1639,50 @@ header {
 }
 
 /* Improve Form Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
+    .booking-form {
+        padding: 2.5rem 0.5rem;
+    }
+    .form-header h2 {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .form-header p {
+        font-size: 0.98rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
     .form-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.1rem;
+        margin-bottom: 1.2rem;
     }
-
-    .form-container {
-        padding: 0 0.75rem;
+    .form-group, .form-group.full-width {
+        grid-column: span 1;
+        width: 100%;
     }
-
     .input-group {
+        border-radius: 10px;
         margin-bottom: 0;
+        box-shadow: 0 2px 8px rgba(0,86,179,0.07);
     }
-
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        padding: 0.95rem 1rem 0.95rem 2.7rem;
+        font-size: 1rem;
+    }
+    .input-group i {
+        left: 0.8rem;
+        font-size: 1.1rem;
+    }
     .submit-btn {
         width: 100%;
-        padding: 1rem 2rem;
+        font-size: 1.08rem;
+        padding: 1rem 0;
+        border-radius: 10px;
+        margin-top: 0.7rem;
     }
 }
 
