@@ -33,6 +33,44 @@ body {
     line-height: 1.6;
     color: var(--text-color);
 }
+section{
+    overflow: hidden;
+}
+@media (min-width:360px) {
+    .container{ max-width: 100%;
+        padding: 0px 25px;
+        margin: 0 auto;
+}
+}
+@media (min-width:768px) {
+    .container{ max-width: 720px;
+        padding: 0px;
+}
+}
+@media (min-width:991px) {
+    .container{ max-width: 840px;
+}
+}
+@media (min-width:1200px) {
+    .container{ max-width: 1160px;
+}
+}
+    @media (min-width:1600px) {
+        .container{ max-width: 1520px;
+    }
+}
+@media (min-width:100px) {
+    .section-gap{ padding: 40px 0px;
+}
+}
+@media (min-width:991px) {
+    .section-gap{ padding: 80px 0px;
+    }
+}
+@media (min-width:1200px) {
+    .section-gap{ padding: 120px 0px;
+    }
+}
 
 /* Header Styles */
 header {
@@ -49,9 +87,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 1rem 0;
 }
 
 .logo {
@@ -137,7 +173,7 @@ header {
 }
 
 /* Mobile Menu Styles */
-@media (max-width: 890px) {
+@media (max-width: 991px) {
     .mobile-logo,
     .close-menu,
     .mobile-nav-header,
@@ -272,9 +308,9 @@ header {
         transform: rotate(90deg);
     }
 
-    .navbar {
+    /* .navbar {
         padding: 0.8rem 5%;
-    }
+    } */
 
     .logo {
         font-size: 1.4rem;
@@ -284,7 +320,7 @@ header {
     .banner-container {
         flex-direction: column;
         text-align: center;
-        padding: 2rem 1.5rem;
+        /* padding: 2rem 1.5rem; */
     }
 
     .banner-content {
@@ -313,20 +349,30 @@ header {
 /* Banner Styles */
 .banner {
     background-color: var(--white);
-    min-height: 100vh;
-    padding-top: 80px;
-    display: flex;
-    align-items: center;
+    /* min-height: 100vh; */
+    /* padding-top: 120px; */
+    /* display: flex;
+    align-items: center; */
+}
+@media (max-width:991px) {
+    .banner{
+        padding-top: 120px !important;
+    }
 }
 
 .banner-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
+    /* max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 5%;
-    gap: 4rem;
+    padding: 2rem 5%; */
+    /* gap: 30px; */
+}
+@media (min-width:567px) {
+    .banner-container{
+        gap: 30px;
+    }
 }
 
 .banner-content {
@@ -358,8 +404,8 @@ header {
     font-weight: 600;
     background: rgba(37,99,235,0.07);
     display: inline-block;
-    padding: 0.35rem 1rem;
-    border-radius: 18px;
+    padding: 0.97rem 2rem;
+    border-radius: 50px;
     box-shadow: none;
     letter-spacing: 0.01em;
 }
@@ -372,12 +418,13 @@ header {
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
+    align-items: center;
 }
 
 .cta-button {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 1rem 2rem;
+    padding: 15px 50px;
     border: none;
     border-radius: 50px;
     font-size: 1.1rem;
@@ -397,7 +444,7 @@ header {
 .secondary-button {
     background-color: transparent;
     color: var(--primary-color);
-    padding: 1rem 2rem;
+    padding: 12px 50px;
     border: 2px solid var(--primary-color);
     border-radius: 50px;
     font-size: 1.1rem;
@@ -469,6 +516,21 @@ header {
 /* Responsive Banner Image */
 @media (max-width: 1200px) {
     .banner-image::before {
+        width: 450px;
+        height: 450px;
+    }
+
+    .banner-image img {
+        width: 400px;
+        height: 400px;
+    }
+    .banner-content h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner-image::before {
         width: 400px;
         height: 400px;
     }
@@ -476,18 +538,6 @@ header {
     .banner-image img {
         width: 350px;
         height: 350px;
-    }
-}
-
-@media (max-width: 992px) {
-    .banner-image::before {
-        width: 350px;
-        height: 350px;
-    }
-
-    .banner-image img {
-        width: 300px;
-        height: 300px;
     }
 }
 
@@ -500,6 +550,9 @@ header {
     .banner-image img {
         width: 250px;
         height: 250px;
+    }
+    .banner-content h1{
+        font-size: 2rem;
     }
 }
 
@@ -530,7 +583,7 @@ header {
 /* Booking Form Styles */
 .booking-form {
     background-color: var(--light-blue);
-    padding: 4rem 1rem;
+    /* padding: 4rem 1rem; */
     position: relative;
 }
 
@@ -545,8 +598,8 @@ header {
 }
 
 .form-container {
-    max-width: 1400px;
-    margin: 0 auto;
+    /* max-width: 1400px;
+    margin: 0 auto; */
     padding: 0;
     position: relative;
 }
@@ -741,7 +794,7 @@ header {
 
 /* Services Section Styles */
 .services {
-    padding: 6rem 1rem;
+    /* padding: 6rem 1rem; */
     background: linear-gradient(to bottom, var(--white) 0%, var(--light-blue) 100%);
 }
 
@@ -749,9 +802,9 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem 5%;
-    max-width: var(--container-xl);
-    margin: 0 auto;
+    /* padding: 2rem 5%; */
+    /* max-width: var(--container-xl); */
+    /* margin: 0 auto; */
 }
 
 .service-card {
@@ -834,7 +887,7 @@ header {
 /* Why Choose Us Styles */
 .why-choose-us {
     background: linear-gradient(to bottom, var(--white) 0%, var(--light-blue) 100%);
-    padding: 5rem 1rem;
+    /* padding: 5rem 1rem; */
 }
 
 .features-grid {
@@ -1003,7 +1056,7 @@ header {
 /* Our Process Section */
 .our-process {
     background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-    padding: 6rem 1rem;
+    /* padding: 6rem 1rem; */
     position: relative;
     color: white;
     box-shadow: 0 8px 32px rgba(37, 99, 235, 0.08);
@@ -1575,18 +1628,18 @@ header {
 
 /* Landscape Mode Fixes */
 @media (max-height: 500px) and (orientation: landscape) {
-    .banner {
+    /* .banner {
         min-height: auto;
         padding: 6rem 0 2rem;
-    }
+    } */
 
-    .banner-container {
+    /* .banner-container {
         flex-direction: row;
         align-items: center;
         gap: 2rem;
-    }
+    } */
 
-    .banner-image::before {
+    /* .banner-image::before {
         width: 200px;
         height: 200px;
     }
@@ -1594,7 +1647,7 @@ header {
     .banner-image img {
         width: 180px;
         height: 180px;
-    }
+    } */
 }
 
 /* Responsive Design for Services Section */
@@ -1692,10 +1745,6 @@ header {
         padding-top: 60px;
     }
 
-    .banner-content h1 {
-        font-size: 2.5rem;
-    }
-
     .banner-content p {
         font-size: 1rem;
     }
@@ -1706,8 +1755,11 @@ header {
     }
 
     .cta-button, .secondary-button {
-        width: 100%;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px 50px;
         text-align: center;
+        font-size: 15px;
     }
 
     .banner-stats {
