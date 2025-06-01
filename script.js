@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Send data to PHP via AJAX
             fetch('booking-mail.php', {
+
               method: 'POST',
               body: formData
             })
@@ -149,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Booking Confirmed!',
                 html: `
                   <div class="swal-booking-details">
-                    <p class="swal-booking-message">Thank you for choosing <b>AppliancePro</b>!<br>Your booking has been received.</p>
+                    <p class="swal-booking-message">Thank you for choosing <b>Repair Service Same Day</b>!<br>Your booking has been received.</p>
                     <div class="swal-booking-divider"></div>
                     <div class="swal-booking-table">
                       <span>Name:</span> <span>${name}</span>
