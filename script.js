@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Send data to PHP via AJAX
-            fetch('/projects/servo-html/booking-mail.php', {
+            fetch('booking-mail.php', {
               method: 'POST',
               body: formData
             })

@@ -70,80 +70,57 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'hkloves1210@gmail.com';
-    $mail->Password   = 'maatlmcslvshcnlt';
+    $mail->Username   = 'repairservicesameday@gmail.com';
+    $mail->Password   = 'hmtkrwtqzcjdqkf';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
     //Recipients
-    $mail->setFrom('hkloves1210@gmail.com', 'AppliancePro');
+    $mail->setFrom('repairservicesameday@gmail.com', 'Repair Service Same Day');
     $mail->addAddress($email ?: 'customer@email.com', $name);
-    $mail->addReplyTo('hkloves1210@gmail.com', 'AppliancePro');
+    $mail->addReplyTo('repairservicesameday@gmail.com', 'Repair Service Same Day');
 
     // Content
     $mail->isHTML(true);
-    $mail->Subject = 'Your AppliancePro Booking Confirmation';
+    $mail->Subject = 'Your Repair Service Same Day Booking Confirmation';
     $mail->Body    = "
     <div style=\"font-family: Poppins, Arial, sans-serif; background: #f6f8fb; padding: 0; margin: 0;\">
       <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background: #f6f8fb; padding: 0; margin: 0;\">
         <tr>
           <td align=\"center\">
-            <table width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"background: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); margin: 40px 0;\">
+            <table width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); margin: 40px 0;\">
               <tr>
-                <td style=\"background: #0056b3; border-radius: 12px 12px 0 0; padding: 32px 0 32px 40px; text-align: left;\">
-                  <span style=\"font-size: 2rem; color: #fff; font-weight: 700; letter-spacing: 1px;\">
-                    🛠️ AppliancePro
+                <td style=\"background: #2563eb; border-radius: 16px 16px 0 0; padding: 32px 0 32px 40px; text-align: left;\">
+                  <img src=\"https://repairservicesameday.com/assets/servo-logo.png\" alt=\"Repair Service Same Day Logo\" style=\"height: 48px; vertical-align: middle;\">
+                  <span style=\"font-size: 2rem; color: #fff; font-weight: 700; letter-spacing: 1px; margin-left: 18px; vertical-align: middle;\">
+                    Repair Service Same Day
                   </span>
                 </td>
               </tr>
               <tr>
                 <td style=\"padding: 32px 40px 16px 40px; text-align: left;\">
-                  <h2 style=\"color: #0056b3; margin: 0 0 12px 0; font-size: 1.5rem;\">Booking Confirmation</h2>
-                  <p style=\"color: #222; font-size: 1.1rem; margin: 0 0 24px 0;\">Thank you for booking your appliance repair with <b>AppliancePro</b>! Here are your booking details:</p>
+                  <h2 style=\"color: #2563eb; margin: 0 0 12px 0; font-size: 1.5rem;\">Booking Confirmation</h2>
+                  <p style=\"color: #222; font-size: 1.1rem; margin: 0 0 24px 0;\">Thank you for booking your appliance repair with <b>Repair Service Same Day</b>! Here are your booking details:</p>
                   <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"background: #f6f8fb; border-radius: 8px; margin-bottom: 24px;\">
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600; width: 160px;\">Name:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$name</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Phone:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$phone</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Address:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$address</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Brand:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$brand</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Appliance:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$appliance</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Problem:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$problem</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Email:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$email</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #0056b3; font-weight: 700;\">Service Charges:</td>
-                      <td style=\"padding: 10px 16px; color: #0056b3; font-weight: 700;\">&#8377;199</td>
-                    </tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600; width: 160px;\">Name:</td><td style=\"padding: 10px 16px; color: #222;\">$name</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Phone:</td><td style=\"padding: 10px 16px; color: #222;\">$phone</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Address:</td><td style=\"padding: 10px 16px; color: #222;\">$address</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Brand:</td><td style=\"padding: 10px 16px; color: #222;\">$brand</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Appliance:</td><td style=\"padding: 10px 16px; color: #222;\">$appliance</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Problem:</td><td style=\"padding: 10px 16px; color: #222;\">$problem</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Email:</td><td style=\"padding: 10px 16px; color: #222;\">$email</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #2563eb; font-weight: 700;\">Service Charges:</td><td style=\"padding: 10px 16px; color: #2563eb; font-weight: 700;\">&#8377;199</td></tr>
                   </table>
                   <p style=\"color: #222; font-size: 1.05rem; margin-bottom: 0;\">Our team will contact you soon to confirm your appointment.<br>We look forward to serving you!</p>
                 </td>
               </tr>
               <tr>
-                <td style=\"background: #f6f8fb; border-radius: 0 0 12px 12px; padding: 24px 40px; text-align: center; color: #888; font-size: 0.95rem;\">
+                <td style=\"background: #f6f8fb; border-radius: 0 0 16px 16px; padding: 24px 40px; text-align: center; color: #888; font-size: 0.95rem;\">
                   <div style=\"margin-bottom: 8px;\">
-                    <b>AppliancePro</b> &bull; 1-800-REPAIR &bull; info@appliancepro.com
+                    <b>Repair Service Same Day</b> &bull; +91 8460725334 &bull; repairservicesameday@gmail.com
                   </div>
-                  <div>123 Service Street, City</div>
-                  <div style=\"margin-top: 8px; color: #bbb; font-size: 0.9em;\">&copy; ".date('Y')." AppliancePro. All rights reserved.</div>
+                  <div>123 Service Street, Ahmedabad</div>
+                  <div style=\"margin-top: 8px; color: #bbb; font-size: 0.9em;\">&copy; ".date('Y')." Repair Service Same Day. All rights reserved.</div>
                 </td>
               </tr>
             </table>
@@ -159,75 +136,52 @@ try {
     $adminMail->isSMTP();
     $adminMail->Host       = 'smtp.gmail.com';
     $adminMail->SMTPAuth   = true;
-    $adminMail->Username   = 'hkloves1210@gmail.com';
-    $adminMail->Password   = 'maatlmcslvshcnlt';
+    $adminMail->Username   = 'repairservicesameday@gmail.com';
+    $adminMail->Password   = 'hmtkrwtqzcjdqkf';
     $adminMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $adminMail->Port       = 587;
-    $adminMail->setFrom('hkloves1210@gmail.com', 'AppliancePro');
-    $adminMail->addAddress('valu12eraze@gmail.com', 'AppliancePro Admin');
+    $adminMail->setFrom('repairservicesameday@gmail.com', 'Repair Service Same Day');
+    $adminMail->addAddress('repairservicesameday@gmail.com', 'Repair Service Same Day Admin');
     $adminMail->isHTML(true);
-    $adminMail->Subject = 'New Booking Received - AppliancePro';
+    $adminMail->Subject = 'New Booking Received - Repair Service Same Day';
     $adminMail->Body    = "
     <div style=\"font-family: Poppins, Arial, sans-serif; background: #f6f8fb; padding: 0; margin: 0;\">
       <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background: #f6f8fb; padding: 0; margin: 0;\">
         <tr>
           <td align=\"center\">
-            <table width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"background: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); margin: 40px 0;\">
+            <table width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); margin: 40px 0;\">
               <tr>
-                <td style=\"background: #0056b3; border-radius: 12px 12px 0 0; padding: 32px 0 32px 40px; text-align: left;\">
-                  <span style=\"font-size: 2rem; color: #fff; font-weight: 700; letter-spacing: 1px;\">
-                    🛠️ AppliancePro
+                <td style=\"background: #2563eb; border-radius: 16px 16px 0 0; padding: 32px 0 32px 40px; text-align: left;\">
+                  <img src=\"https://repairservicesameday.com/assets/servo-logo.png\" alt=\"Repair Service Same Day Logo\" style=\"height: 48px; vertical-align: middle;\">
+                  <span style=\"font-size: 2rem; color: #fff; font-weight: 700; letter-spacing: 1px; margin-left: 18px; vertical-align: middle;\">
+                    Repair Service Same Day
                   </span>
                 </td>
               </tr>
               <tr>
                 <td style=\"padding: 32px 40px 16px 40px; text-align: left;\">
-                  <h2 style=\"color: #0056b3; margin: 0 0 12px 0; font-size: 1.5rem;\">New Booking Received</h2>
+                  <h2 style=\"color: #2563eb; margin: 0 0 12px 0; font-size: 1.5rem;\">New Booking Received</h2>
                   <p style=\"color: #222; font-size: 1.1rem; margin: 0 0 24px 0;\">A new booking has been submitted. Here are the details:</p>
                   <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"background: #f6f8fb; border-radius: 8px; margin-bottom: 24px;\">
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600; width: 160px;\">Name:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$name</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Phone:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$phone</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Email:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$email</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Address:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$address</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Brand:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$brand</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Appliance:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$appliance</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Problem:</td>
-                      <td style=\"padding: 10px 16px; color: #222;\">$problem</td>
-                    </tr>
-                    <tr>
-                      <td style=\"padding: 10px 16px; color: #0056b3; font-weight: 700;\">Service Charges:</td>
-                      <td style=\"padding: 10px 16px; color: #0056b3; font-weight: 700;\">&#8377;199</td>
-                    </tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600; width: 160px;\">Name:</td><td style=\"padding: 10px 16px; color: #222;\">$name</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Phone:</td><td style=\"padding: 10px 16px; color: #222;\">$phone</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Email:</td><td style=\"padding: 10px 16px; color: #222;\">$email</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Address:</td><td style=\"padding: 10px 16px; color: #222;\">$address</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Brand:</td><td style=\"padding: 10px 16px; color: #222;\">$brand</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Appliance:</td><td style=\"padding: 10px 16px; color: #222;\">$appliance</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #555; font-weight: 600;\">Problem:</td><td style=\"padding: 10px 16px; color: #222;\">$problem</td></tr>
+                    <tr><td style=\"padding: 10px 16px; color: #2563eb; font-weight: 700;\">Service Charges:</td><td style=\"padding: 10px 16px; color: #2563eb; font-weight: 700;\">&#8377;199</td></tr>
                   </table>
                   <p style=\"color: #222; font-size: 1.05rem; margin-bottom: 0;\">Please follow up with the customer to confirm the appointment.</p>
                 </td>
               </tr>
               <tr>
-                <td style=\"background: #f6f8fb; border-radius: 0 0 12px 12px; padding: 24px 40px; text-align: center; color: #888; font-size: 0.95rem;\">
+                <td style=\"background: #f6f8fb; border-radius: 0 0 16px 16px; padding: 24px 40px; text-align: center; color: #888; font-size: 0.95rem;\">
                   <div style=\"margin-bottom: 8px;\">
-                    <b>AppliancePro</b> &bull; 1-800-REPAIR &bull; info@appliancepro.com
+                    <b>Repair Service Same Day</b> &bull; +91 8460725334 &bull; repairservicesameday@gmail.com
                   </div>
-                  <div>123 Service Street, City</div>
-                  <div style=\"margin-top: 8px; color: #bbb; font-size: 0.9em;\">&copy; ".date('Y')." AppliancePro. All rights reserved.</div>
+                  <div>123 Service Street, Ahmedabad</div>
+                  <div style=\"margin-top: 8px; color: #bbb; font-size: 0.9em;\">&copy; ".date('Y')." Repair Service Same Day. All rights reserved.</div>
                 </td>
               </tr>
             </table>

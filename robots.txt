@@ -1,7 +1,77 @@
+# robots.txt for Repair Services Same Day
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
+Allow: /assets/
+Allow: /images/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
 
-Sitemap: https://yourdomain.com/sitemap.xml 
+# Disallow admin and sensitive directories
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/uploads/
+
+# Disallow specific file types
+Disallow: /*.sql$
+Disallow: /*.sql.gz$
+Disallow: /*.log$
+Disallow: /*.txt$
+Disallow: /*.md$
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+Disallow: /*.ini$
+Disallow: /*.conf$
+Disallow: /*.config$
+Disallow: /*.env$
+Disallow: /*.htaccess$
+Disallow: /*.htpasswd$
+Disallow: /*.bak$
+Disallow: /*.swp$
+Disallow: /*.tmp$
+Disallow: /*.temp$
+
+# Allow sitemap
+Allow: /sitemap.xml
+Allow: /sitemap-index.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://repairservicesameday.com/sitemap.xml
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Yandex
+Disallow: / 
